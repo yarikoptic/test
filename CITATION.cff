@@ -1,99 +1,47 @@
-authors:
-- family-names: Halchenko
-  given-names: Yaroslav O.
-  orcid: https://orcid.org/0000-0003-3456-2493
-- family-names: Goncalves
-  given-names: Mathias
-  orcid: https://orcid.org/0000-0002-7252-7771
-- family-names: Ghosh
-  given-names: Satrajit
-  orcid: https://orcid.org/0000-0002-5312-6729
-- family-names: Velasco
-  given-names: Pablo
-  orcid: https://orcid.org/0000-0002-5749-6049
-- family-names: Visconti di Oleggio Castello
-  given-names: Matteo
-  orcid: https://orcid.org/0000-0001-7931-5272
-- family-names: Salo
-  given-names: Taylor
-  orcid: https://orcid.org/0000-0001-9813-3167
-- family-names: Wodder II
-  given-names: John T.
-- family-names: Hanke
-  given-names: Michael
-  orcid: https://orcid.org/0000-0001-6398-6370
-- family-names: Sadil
-  given-names: Patrick
-  orcid: https://orcid.org/0000-0003-4141-1343
-- family-names: Gorgolewski
-  given-names: Krzysztof Jacek
-  orcid: https://orcid.org/0000-0003-3321-7583
-- family-names: Ioanas
-  given-names: Horea-Ioan
-  orcid: https://orcid.org/0000-0001-7037-2449
-- family-names: Rorden
-  given-names: Chris
-  orcid: https://orcid.org/0000-0002-7554-6142
-- family-names: Hendrickson
-  given-names: Timothy J.
-  orcid: https://orcid.org/0000-0001-6862-6526
-- family-names: Dayan
-  given-names: Michael
-  orcid: https://orcid.org/0000-0002-2666-0969
-- family-names: Houlihan
-  given-names: Sean Dae
-  orcid: https://orcid.org/0000-0001-5003-9278
-- family-names: Kent
-  given-names: James
-  orcid: https://orcid.org/0000-0002-4892-2659
-- family-names: Strauss
-  given-names: Ted
-  orcid: https://orcid.org/0000-0002-1927-666X
-- family-names: Lee
-  given-names: John
-  orcid: https://orcid.org/0000-0001-5884-4247
-- family-names: To
-  given-names: Isaac
-  orcid: https://orcid.org/0000-0002-4740-0824
-- family-names: Markiewicz
-  given-names: Christopher J.
-  orcid: https://orcid.org/0000-0002-6533-164X
-- family-names: Lukas
-  given-names: Darren
-  orcid: https://orcid.org/0009-0003-6941-0833
-- family-names: Butler
-  given-names: Ellyn R.
-  orcid: https://orcid.org/0000-0001-6316-6444
-- family-names: Thompson
-  given-names: Todd
-- family-names: Termenon
-  given-names: Maite
-  orcid: https://orcid.org/0000-0001-8102-5135
-- family-names: Smith
-  given-names: David V.
-  orcid: https://orcid.org/0000-0001-5754-9633
-- family-names: Macdonald
-  given-names: Austin
-  orcid: https://orcid.org/0000-0002-8124-807X
-- family-names: Kennedy
-  given-names: David N.
-  orcid: https://orcid.org/0000-0002-9377-0797
 cff-version: 1.2.0
-identifiers:
-- type: other
-  value: RRID:SCR_017427
-  description: Research Resource Identifier - https://scicrunch.org/resolver/RRID:SCR_017427
-- type: doi
-  value: 10.5281/zenodo.1012598
-  description: The concept DOI for the collection containing all versions of the HeuDiConv
-keywords:
-- Python
-- neuroscience
-- standardization
-- DICOM
-- BIDS
-- open science
-- FOSS
-message: Do not use this -- it is only for testing purposes of various kinds
-title: 'Test everything repo -- just a repo to test thinkgs up'
-license: Apache-2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Galassi"
+  given-names: "Anthony"
+  orcid: "https://orcid.org/0000-0001-6550-4574"
+- family-names: "Norgaard"
+  given-names: "Martin"
+  orcid: "https://orcid.org/0000-0003-2131-5688"
+- family-names: "Thomas"
+  given-names: "Adam G."   
+  orcid: "https://orcid.org/0000-0002-2850-1419"
+- family-names: "Gonzalez-Escamilla"
+  given-names: "Gabriel"   
+  orcid: "https://orcid.org/0000-0002-7209-1736"
+- family-names: "Svarer"
+  given-names: "Claus"   
+  orcid: "https://orcid.org/0000-0001-7811-1825"
+- family-names: "Rorden"
+  given-names: "Chris"   
+  orcid: "https://orcid.org/0000-0002-7554-6142"
+- family-names: "Matheson"
+  given-names: "Granville"   
+  orcid: "https://orcid.org/0000-0002-5646-4547"
+- family-names: "Knudsen"
+  given-names: "Gitte"   
+  orcid: "https://orcid.org/0000-0003-1508-6866"
+- family-names: "Innis"
+  given-names: "Robert"   
+  orcid: "https://orcid.org/0000-0003-1238-7209" 
+- family-names: "Ganz-Benjaminsen"
+  given-names: "Melanie"
+  orcid: "https://orcid.org/0000-0002-9120-8098"
+- family-names: "Bilgel"
+  given-names: "Murat"
+  orcid: "https://orcid.org/0000-0001-5042-7422"
+- family-names: "Eierud"
+  given-names: "Cyrus"
+  orcid: "https://orcid.org/0000-0002-9942-676X"
+- family-names: "Pernet"
+  given-names: "Cyril"
+  orcid: "https://orcid.org/0000-0003-4010-4632"
+title: "PET2BIDS"
+version: 1.3.20240502
+url: "https://github.com/openneuropet/PET2BIDS"
+date-released: 2022-10-01
+license: MIT
