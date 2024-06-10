@@ -94,6 +94,6 @@ keywords:
 - BIDS
 - open science
 - FOSS
-message: If you use this software, please cite it using these metadata.
-title: 'HeuDiConv: flexible DICOM conversion into structured directory layouts'
+message: Do not use this -- it is only for testing purposes of various kinds
+title: 'Test everything repo -- just a repo to test thinkgs up'
 license: Apache-2.0
