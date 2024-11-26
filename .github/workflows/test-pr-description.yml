@@ -30,6 +30,7 @@ jobs:
           echo "Fetching PR description..."
           PR_DESCRIPTION=$(jq -r '.pull_request.body' < "${GITHUB_EVENT_PATH}")
 
+          [ -z "$PR_DESCRIPTION" ] && { echo "nothing special to change"; exit 0; }
           echo "PR Description:"
           echo "$PR_DESCRIPTION"
 
