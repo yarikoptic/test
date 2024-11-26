@@ -1,0 +1,65 @@
+name: PR Info and Push Workflow
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+  push:
+    branches:
+      - '**' # Trigger on pushes to all branches
+
+jobs:
+  extract-pr-info:
+    if: github.event_name == 'pull_request' || github.event_name == 'pull_request_target'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Extract settings from PR description
+        id: extract-pr-info
+        run: |
+          # Extract PR description
+          echo "Fetching PR description..."
+          PR_DESCRIPTION=$(jq -r '.pull_request.body' < "${GITHUB_EVENT_PATH}")
+
+          echo "PR Description:"
+          echo "$PR_DESCRIPTION"
+
+          # Define regex patterns to extract settings
+          SETTING_1=$(echo "$PR_DESCRIPTION" | grep -oP '(?<=SETTING_1:\s).*')
+          SETTING_2=$(echo "$PR_DESCRIPTION" | grep -oP '(?<=SETTING_2:\s).*')
+
+          # Output extracted settings
+          echo "Extracted Settings:"
+          echo "SETTING_1: $SETTING_1"
+          echo "SETTING_2: $SETTING_2"
+
+          # Set outputs for downstream steps or reusable workflows
+          echo "::set-output name=setting_1::$SETTING_1"
+          echo "::set-output name=setting_2::$SETTING_2"
+
+      - name: Output extracted settings
+        run: |
+          echo "Setting 1: ${{ steps.extract-pr-info.outputs.setting_1 }}"
+          echo "Setting 2: ${{ steps.extract-pr-info.outputs.setting_2 }}"
+
+  regular-push:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run push-related actions
+        run: |
+          echo "Running regular push workflow..."
+          echo "Branch: ${{ github.ref }}"
+          # Add your push-related tasks here
