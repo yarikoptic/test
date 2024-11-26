@@ -1,4 +1,4 @@
-name: PR Info and Push Workflow
+name: Smart PR action
 
 on:
   pull_request:
