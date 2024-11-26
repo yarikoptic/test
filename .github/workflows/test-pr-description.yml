@@ -1,4 +1,4 @@
-name: PR Info and Push Workflow
+name: Smart PR action
 
 on:
   pull_request:
@@ -28,8 +28,12 @@ jobs:
         run: |
           # Extract PR description
           echo "Fetching PR description..."
+          echo "title: ${{ github.event.pull_request.title }}"
+          echo "body: ${{ github.event.pull_request.body }}"
+
           PR_DESCRIPTION=$(jq -r '.pull_request.body' < "${GITHUB_EVENT_PATH}")
 
+          [ -z "$PR_DESCRIPTION" ] && { echo "nothing special to change"; exit 0; }
           echo "PR Description:"
           echo "$PR_DESCRIPTION"
 
